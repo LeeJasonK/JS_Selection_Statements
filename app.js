@@ -4,9 +4,15 @@ console.log(
 );
 /*
 Exercise 1
+/*
+Initialize an integer to represent a favorite number and assign a value with a number of your choosing or you can assign a random number to this variable.
+Use window.prompt() to ask the user to input a number, and store the result in a variable
+Create an if-statement that if the guessed number is below the initial value, print out "too low".
+Create an else-if statement that if the number is higher than the initial value, print out "too high".
+Create an else statement that prints out "Congratulations!!!".
+
 let favoriteNumber = 209;
 //favoriteNumber = Math.floor(Math.random() *100);
-
 console.log(favoriteNumber);
 
 const input = window.prompt("Please input a number");
@@ -20,21 +26,22 @@ if (input < favoriteNumber) {
   console.log("Congratulations!");
 }
 */
-
-/*
 // Exercise 2
-const birthMonth = window.prompt("What is your birth month?");
-console.log(birthMonth);
-const lowerCaseBirthMonth = birthMonth.toLowerCase();
-console.log(lowerCaseBirthMonth);
-const shortenedBirthMonth = lowerCaseBirthMonth.slice(0, 3); /* 0,1,2 
+/*
+Declare a variable named birthMonth and set the value as the result of window.prompt("What is your birth month?").
+Create a switch-case statement with cases and a default case.
+Print a response to the console that displays the season that the user was born in depending on their birth month input.
 
-switch (birthMonth) {
+*/
+const birthmonth = window.prompt("what is your brith month?");
+console.log(birthmonth);
+
+switch (birthmonth) {
   
   case "jan":
   case "feb":
   case "mar":
-    console.log("WInter Season");
+    console.log("Winter Season");
     break;
   case "apr":
   case "may":
@@ -49,16 +56,15 @@ switch (birthMonth) {
   case "oct":
   case "nov":
   case "dec":
-    console.log("WInter Season");
+    console.log("Fall Season");
     break;
-
   default :
-    console.log("Please enter a valid birth month");
+    console.log("Please input in three lower case letters. For example, jan for January.");
 }
 
-*/
 // Ecercise3 
-
+//Given business logic that is written in the form of if/else statements, rewrite the program with switch cases.
+//Start with the following code:
 let typeId = "01";
 let colorId = "PU";
 let sizeId = "L";
@@ -67,7 +73,6 @@ let type = "";
 let color = "";
 let size = "";
 
-/*
 if (typeId == "01") {
   type = "Tank top";
 } else if (typeId == "02") {
@@ -79,7 +84,9 @@ if (typeId == "01") {
 } else {
   type = "Other";
 }
-*/
+//After you refactor your program to use switch cases inplace of if/else statements, your output should read:
+//Product: Large Purple Tank Top
+
 switch (typeId) {
   case "01":
   type = "Tank top";
@@ -92,7 +99,8 @@ switch (typeId) {
   break;
 
   case "03":
-  type = "Long Sleeve";
+  type = "Long Sleeve";purple
+
   console.log("Long Sleeve");
   break;
 
@@ -106,7 +114,7 @@ switch (typeId) {
   console.log("other");
   break;
 }
-/*
+
 if (colorId == "BK") {
   color = "Black";
 } else if (colorId == "BL") {
@@ -118,7 +126,6 @@ if (colorId == "BK") {
 } else {
   color = "White";
 }
-*/
 
 switch (colorId) {
   case "Bk":
@@ -140,10 +147,8 @@ switch (colorId) {
   default:
     color = "white";
     console.log("White");
-
 }
 
-/*
 if (sizeId == "S") {
   size = "Small";
 } else if (sizeId == "M") {
@@ -155,7 +160,7 @@ if (sizeId == "S") {
 } else {
   size = "One Size Fits All";
 }
-*/
+
 switch (sizeId) {
   case "S":
     size = "Small";
@@ -181,7 +186,6 @@ switch (sizeId) {
     size = "One Size Fits All";
     console.log("One Size Fits All");
     break;
-
   }
-console.log(`Product: ${size} ${color} ${type}`);
+  console.log(`Product: ${size} ${color} ${type}`);
 
